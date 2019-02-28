@@ -1,13 +1,22 @@
 * {
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .flex-container {
     display: flex;
-    /* flex-direction: row; */
-    flex-flow: wrap column;
+    flex-wrap: wrap;
 }
 
-#item {
-    background-color: lightblue;
+.item {
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    flex-flow: wrap;
+    width: 28%;
+    background-color: gray;
+    
+}
+
+@media queries  {
+
 }
