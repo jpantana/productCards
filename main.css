@@ -17,6 +17,11 @@
     
 }
 
+img {
+    width: 40%;
+    align-items: center;
+}
+
 @media queries  {
 
 }
