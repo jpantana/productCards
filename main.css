@@ -1,4 +1,8 @@
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 h1 {
     text-align: center;
 }
@@ -7,19 +11,21 @@ h1 {
     flex-wrap: wrap;
 }
 
-h2 {
+.prodcut-title {
     text-align: center;
+    border: dotted 1px lightgrey;
+    
 }
 
 .card {
-    padding: 10px;
+    /* padding: 10px; */
     margin: auto;
     margin-top: 10px;
     flex-flow: wrap;
     width: 28%;
     background-color: white;
-    border: solid 1px lightblue;
     box-shadow: 4px 4px rgba(0, 0, 0, .5);
+    border: solid 1px lightblue;
 }
 
 img {
@@ -28,7 +34,41 @@ img {
     width: 80%;
 }
 
-.descrip {
+.justify-descrip {
     text-align: justify;
+    padding: 8px;
+}
+
+.bold {
+    font-weight: bold;
+    margin: auto;
+    padding: 0 0 0 1.2em;
+}
+
+.available {
+    background: grey;
+    color: yellow;
+    line-height: 2em;
+    font-size: 1.2em;
+}
+
+.specs {
+    align-items: center;
+}
+
+p:not(.justify-descrip, .available) {
+    line-height: 1em;
+}
+
+h2:not(.title) {
+    line-height: 1em;
+    font-weight: lighter;
+    padding: 0;
+    margin: auto;
+}
+
+footer > p {
+    margin: auto;
+    padding: 2px;
 }
 
