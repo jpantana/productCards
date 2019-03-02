@@ -1,20 +1,35 @@
 
+/* font-family: 'Anton', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Teko', sans-serif; */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    background-color: #1e88e5;
+    color: white;
+
 }
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     align-items: space-around;
+    /* position: relative; */
 }
 
 .prodcut-title {
     text-align: center;
-    border: dotted 1px lightgrey;
+    border: solid 2px #1e88e5;
+    border-radius: 5px;
+    background-color: #1e88e5;
+    color: white;
+    font-family: 'Anton', sans-serif;
     
 }
 
@@ -25,14 +40,27 @@ h1 {
     flex-flow: wrap;
     width: 28%;
     background-color: white;
-    box-shadow: 4px 4px rgba(0, 0, 0, .5);
-    border: solid 1px lightblue;
+    border: solid 1px #9e9e9e;
+    border-radius: 5.5px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
 }
 
 img {
     display: block;
     margin: auto;
     width: 80%;
+    z-index: 1;
+}
+
+.soldOut {
+    content: url(./images/soldOUt.png);
+    position: absolute;
+    opacity: .8;
+    width: 100%;
+    top: 110px;
+    z-index: 3;
 }
 
 .justify-descrip {
@@ -47,10 +75,22 @@ img {
 }
 
 .available {
-    background: grey;
-    color: yellow;
+    background: #9e9e9e;
+    color: white;
     line-height: 2em;
     font-size: 1.2em;
+    text-align: center;
+    letter-spacing: .9em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.zoom:hover:not(img) {
+    transform: scale(1.08);
+    border-radius: 10px;
+    transition-duration: 1.3s;
+    background-color: #5aa4e6;
+    border: solid #5aa4e6 2px;
 }
 
 .specs {
@@ -65,11 +105,13 @@ h2:not(.title) {
     line-height: 1em;
     font-weight: lighter;
     padding: 0;
+    padding-left: 7px;
     margin: auto;
 }
 
 footer > p {
     margin: auto;
     padding: 2px;
+    padding-left: 7px;
 }
 
