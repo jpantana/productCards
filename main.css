@@ -1,38 +1,43 @@
-
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
-}
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: space-around;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-size: 4em;
+    background-color: #1e88e5;
+    color: white;
 }
 
 .prodcut-title {
     text-align: center;
-    border: dotted 1px lightgrey;
-    
-}
-
-.card {
-    /* padding: 10px; */
-    margin: auto;
-    margin-top: 10px;
-    flex-flow: wrap;
-    width: 28%;
-    background-color: white;
-    box-shadow: 4px 4px rgba(0, 0, 0, .5);
-    border: solid 1px lightblue;
+    border: solid 2px #1e88e5;
+    border-radius: 5px;
+    background-color: #1e88e5;
+    color: white;
+    font-family: 'Anton', sans-serif;
 }
 
 img {
     display: block;
     margin: auto;
     width: 80%;
+    z-index: 1;
+}
+
+.soldOut {
+    content: url(./images/soldOUt.png);
+    position: absolute;
+    opacity: .8;
+    width: 100%;
+    top: 110px;
+    z-index: 3;
+}
+.soldOut:hover {
+    transform: scale(1.08);
+    transition-duration: .2s; 
 }
 
 .justify-descrip {
@@ -47,10 +52,22 @@ img {
 }
 
 .available {
-    background: grey;
-    color: yellow;
+    background: #9e9e9e;
+    color: white;
     line-height: 2em;
     font-size: 1.2em;
+    text-align: center;
+    letter-spacing: .9em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.zoom:hover:not(img) {
+    transform: scale(1.08);
+    border-radius: 10px;
+    transition-duration: 1.3s;
+    background-color: #5aa4e6;
+    border: solid #5aa4e6 2px;
 }
 
 .specs {
@@ -65,11 +82,205 @@ h2:not(.title) {
     line-height: 1em;
     font-weight: lighter;
     padding: 0;
+    padding-left: 7px;
     margin: auto;
 }
 
 footer > p {
     margin: auto;
     padding: 2px;
+    padding-left: 7px;
 }
 
+
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-around;
+        /* position: relative; */
+    }
+
+    .card {
+        /* padding: 10px; */
+        margin: auto;
+        margin-top: 10px;
+        /* flex-flow: wrap; */
+        /* width: 28%; */
+        background-color: white;
+        border: solid 1px #9e9e9e;
+        border-radius: 5.5px;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        min-width: 730px;
+        max-width: 777px;
+    }
+/* end iPone 6-8 media q */
+}
+
+
+
+
+/* ====== iPHONE 6-8 ======  */
+/* Portrait and Landscape */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-around;
+        /* position: relative; */
+    }
+
+    .card {
+        /* padding: 10px; */
+        margin: auto;
+        margin-top: 10px;
+        /* flex-flow: wrap; */
+        width: 28%;
+        background-color: white;
+        border: solid 1px #9e9e9e;
+        border-radius: 5.5px;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        
+    }
+/* end iPone 6-8 media q */
+}
+
+
+
+
+
+/* ----------- iPhone X ----------- */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-around;
+        /* position: relative; */
+    }
+
+    .card {
+        /* padding: 10px; */
+        margin: auto;
+        margin-top: 10px;
+        /* flex-flow: wrap; */
+        /* width: %; */
+        background-color: white;
+        border: solid 1px #9e9e9e;
+        border-radius: 5.5px;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        min-width: 730px;
+        max-width: 777px;
+    }
+
+/* iPhone X end */
+}
+    
+
+
+
+/* ----------- iPad 4 " ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-around;
+        /* position: relative; */
+    }
+
+    .card {
+        /* padding: 10px; */
+        margin: auto;
+        margin-top: 10px;   
+        background-color: white;
+        border: solid 1px #9e9e9e;
+        border-radius: 5.5px;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        min-width: 355px;
+        max-width: 356px;
+    }
+
+/* ----------- END iPad ----------- */
+}
+
+
+
+
+/* LAPTOP MEDIA Q RETINA */
+@media screen 
+and (min-device-width: 1200px) 
+/* and (max-device-width: 1600px)  */
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) { 
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: space-around;
+        /* position: relative; */
+        }
+
+    .card {
+        /* padding: 10px; */
+        margin: auto;
+        margin-top: 10px;
+        /* flex-flow: wrap; */
+        /* width: 28%; */
+        background-color: white;
+        border: solid 1px #9e9e9e;
+        border-radius: 5.5px;
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 1;
+        min-width: 355px;
+        max-width: 356px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Teko', sans-serif; */
