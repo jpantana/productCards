@@ -35,6 +35,10 @@ img {
     top: 110px;
     z-index: 3;
 }
+.soldOut:hover {
+    transform: scale(1.08);
+    transition-duration: .2s; 
+}
 
 .justify-descrip {
     text-align: justify;
